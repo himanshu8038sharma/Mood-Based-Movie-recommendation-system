@@ -83,11 +83,6 @@ Then open the local URL Streamlit prints (usually http://localhost:8501).
 
 Python · Streamlit · pandas · scikit-learn · matplotlib
 
-## Possible improvements
-
-- Compute the similarity matrix at startup (or store it as `float16`) so no large file is needed
-- Add movie posters via the TMDB API
-- Add more moods or let users combine several
 
 ## License
 
