@@ -1,0 +1,18 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large generated file (~185 MB, exceeds GitHub's 100 MB limit).
+# Regenerate it with: python save_model.py
+similarity.pkl
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
