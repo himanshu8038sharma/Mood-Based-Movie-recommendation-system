@@ -15,6 +15,8 @@ def load_similarity():
         filename="similarity.pkl",
         repo_type="model"
     )
+    return pd.read_pickle(file_path)
+similarity = load_similarity()
 # Mood mapping 
 mood_genre_map = {
     "😊 Happy": ["comedy", "family"],
