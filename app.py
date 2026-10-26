@@ -1,13 +1,20 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from huggingface_hub import hf_hub_download
 st.set_page_config(
     page_title="Mood-Based Movie Recommender",
     layout="wide"
 )
 #  Load data 
 movies = pd.read_pickle("movies.pkl")
-similarity = pd.read_pickle("similarity.pkl")
+@st.cache_resource
+def load_similarity():
+    file_path = hf_hub_download(
+        repo_id="himanshulearner/mood-movie-recommender",
+        filename="similarity.pkl",
+        repo_type="model"
+    )
 # Mood mapping 
 mood_genre_map = {
     "😊 Happy": ["comedy", "family"],
